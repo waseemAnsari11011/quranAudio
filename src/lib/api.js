@@ -1,7 +1,9 @@
 /* File: src/lib/api.js */
 // --- Local Backend API Configuration ---
-const LOCAL_API_BASE_URL = "http://localhost:8000/api";
+// const LOCAL_API_BASE_URL = "http://localhost:8000/api";
 // const LOCAL_API_BASE_URL = "https://103e09ce49d5.ngrok-free.app/api"; // Use your ngrok URL here
+
+const LOCAL_API_BASE_URL = "https://quran-audio-backend.onrender.com/api";
 
 import { getTafsirForChapter } from "./tafsirData";
 import { usePlayerStore } from "./store";
