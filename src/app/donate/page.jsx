@@ -149,6 +149,11 @@ export default function DonatePage() {
             status="inProgress"
           />
           <RoadmapItem
+            title="Verse-by-Verse Translation & Tafsir"
+            description="Read and listen to translations and tafsir for each verse."
+            status="planned"
+          />
+          <RoadmapItem
             title="Mobile Apps (iOS & Android)"
             description="Dedicated apps for a seamless experience on your mobile devices."
             status="planned"
