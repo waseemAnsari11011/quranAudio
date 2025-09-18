@@ -1,3 +1,4 @@
+/* File: src/app/surah/[surahId]/page.jsx */
 import { fetchSurahById } from "@/lib/api";
 import SurahDetail from "@/components/surah/SurahDetail";
 

@@ -1,3 +1,4 @@
+/* File: src/lib/utils.js */
 /**
  * @file utils.js
  * @description Utility functions for general-purpose tasks.

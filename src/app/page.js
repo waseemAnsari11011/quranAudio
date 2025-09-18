@@ -1,3 +1,4 @@
+/* File: src/app/page.js */
 import SurahList from "@/components/surah/SurahList";
 
 export default function HomePage() {

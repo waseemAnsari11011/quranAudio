@@ -1,3 +1,4 @@
+/* File: src/app/loading.jsx */
 // quranaudio/src/app/loading.jsx
 
 export default function Loading() {

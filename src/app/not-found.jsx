@@ -1,3 +1,4 @@
+/* File: src/app/not-found.jsx */
 // quranaudio/src/app/not-found.jsx
 import Link from "next/link";
 import { BookOpen, Home } from "lucide-react";

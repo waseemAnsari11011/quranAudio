@@ -1,3 +1,4 @@
+/* File: src/app/surah/[surahId]/loading.jsx */
 import React from "react";
 
 // This is a Next.js convention for creating a loading UI for a specific route.

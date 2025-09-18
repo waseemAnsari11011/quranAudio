@@ -1,3 +1,4 @@
+/* File: src/lib/hooks.js */
 import { useState, useEffect } from "react";
 import { fetchSurahs } from "./api";
 

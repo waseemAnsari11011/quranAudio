@@ -1,3 +1,4 @@
+/* File: src/components/surah/SurahCard.jsx */
 "use client";
 import React from "react";
 import { usePlayerStore } from "@/lib/store";

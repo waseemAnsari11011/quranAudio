@@ -1,3 +1,4 @@
+/* File: src/lib/store.js */
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { fetchFullSurahAudio } from "./api";
@@ -21,6 +22,11 @@ export const usePlayerStore = create(
       isInitialLoad: true,
       trackType: "recitation", // 'recitation' or 'tafsir'
       isLoading: false,
+
+      // Auth State
+      token: null,
+      user: null,
+      isLoggedIn: false,
 
       // Actions
       playFullSurah: async (
@@ -139,6 +145,17 @@ export const usePlayerStore = create(
           isLoading: false,
         });
       },
+      // Auth Actions
+      login: (token, user) => {
+        set({ token, user, isLoggedIn: true });
+      },
+      logout: () => {
+        set({ token: null, user: null, isLoggedIn: false });
+      },
+      checkAuth: () => {
+        const token = get().token;
+        set({ isLoggedIn: !!token });
+      },
     }),
     {
       name: "quran-audio-player-storage",
@@ -160,6 +177,9 @@ export const usePlayerStore = create(
         trackType: state.trackType,
         progress: state.progress,
         currentAudioIndex: state.currentAudioIndex,
+        // Auth state to persist
+        token: state.token,
+        user: state.user,
       }), // Don't persist audioUrls as they can become stale
     }
   )

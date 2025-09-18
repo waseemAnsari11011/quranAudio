@@ -1,3 +1,4 @@
+/* File: src/lib/tafsirData.js */
 export const tafsirData = [
   {
     ch: "000",

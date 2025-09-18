@@ -1,3 +1,4 @@
+/* File: src/components/layout/Providers.jsx */
 "use client";
 
 import AudioPlayer from "../audio/AudioPlayer";

@@ -1,3 +1,4 @@
+/* File: src/components/audio/AudioPlayer.jsx */
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { usePlayerStore } from "../../lib/store";

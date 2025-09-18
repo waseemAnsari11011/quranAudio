@@ -1,3 +1,4 @@
+/* File: src/components/surah/SurahList.jsx */
 "use client";
 import React, { useState, useEffect } from "react";
 import SurahCard from "./SurahCard.jsx";

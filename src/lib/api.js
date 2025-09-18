@@ -1,6 +1,8 @@
+/* File: src/lib/api.js */
 // --- Local Backend API Configuration ---
 const LOCAL_API_BASE_URL = "http://localhost:8000/api";
 import { getTafsirForChapter } from "./tafsirData";
+import { usePlayerStore } from "./store";
 
 /**
  * A generic fetch wrapper for calling the local backend API.
@@ -169,4 +171,33 @@ export const fetchSurahById = async (id) => {
   }));
 
   return { ...surahInfo, verses };
+};
+
+export const signup = async (userData) => {
+  return fetchFromLocalAPI("/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
+  });
+};
+
+export const login = async (credentials) => {
+  const data = await fetchFromLocalAPI("/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  });
+  // Update the Zustand store on successful login
+  if (data.token) {
+    usePlayerStore.getState().login(data.token, data.user);
+  }
+  return data;
+};
+
+export const logout = () => {
+  localStorage.removeItem("token");
 };
