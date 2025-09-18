@@ -91,7 +91,7 @@ export default function DonatePage() {
         </h2>
         <div className="grid grid-cols-3 gap-4 text-center mb-6">
           <button
-            onClick={() => handlePayment(1)} //edit
+            onClick={() => handlePayment(100)} //edit
             disabled={loading}
             className="p-6 bg-green-600 text-white rounded-lg font-bold text-xl hover:bg-green-700 transition disabled:opacity-50"
           >
