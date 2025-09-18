@@ -1,6 +1,8 @@
 /* File: src/lib/api.js */
 // --- Local Backend API Configuration ---
 const LOCAL_API_BASE_URL = "http://localhost:8000/api";
+// const LOCAL_API_BASE_URL = "https://103e09ce49d5.ngrok-free.app/api"; // Use your ngrok URL here
+
 import { getTafsirForChapter } from "./tafsirData";
 import { usePlayerStore } from "./store";
 
@@ -200,4 +202,14 @@ export const login = async (credentials) => {
 
 export const logout = () => {
   localStorage.removeItem("token");
+};
+
+export const createOrder = async (amount) => {
+  return fetchFromLocalAPI("/payment/create-order", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ amount }),
+  });
 };

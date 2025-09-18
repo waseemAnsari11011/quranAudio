@@ -30,6 +30,12 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
+            <Link
+              href="/donate"
+              className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500 transition-colors"
+            >
+              Support Us
+            </Link>
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
