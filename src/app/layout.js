@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Quran Audio - Listen & Understand the Holy Quran",
     description:
-      "Immerse yourself in the words of the Quran. Listen to beautiful recitations, explore different Qaris, and understand the meaning with translation and tafsir for a beautiful experience. Click to start your spiritual journey.",
+      "Immerse yourself in the words of the Almighty. Listen to beautiful recitations, explore different Qaris, and understand the meaning with translation and tafsir for a beautiful experience. Click to start your spiritual journey.",
     url: "https://quranaudio.in",
     images: [
       {
